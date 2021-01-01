@@ -8,9 +8,9 @@ servers without doing something
 # Presettings
 
 - Firefox
--geckodriver
--Python 3.6+
--pip 3.6
--Selenium ```` pip install selenium ````
+- geckodriver
+- Python 3.6+
+- pip 3.6
+- Selenium ```` pip install selenium ````
 
 
