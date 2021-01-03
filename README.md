@@ -15,3 +15,5 @@ servers without doing something
 - YAML ```` pip install pyyaml ````
 
 
+# Use
+Enter your Minecraft Name and your Vote Website in ````config.yaml````
