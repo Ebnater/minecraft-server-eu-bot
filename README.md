@@ -12,5 +12,6 @@ servers without doing something
 - Python 3.6+
 - pip 3.6
 - Selenium ```` pip install selenium ````
+- YAML ```` pip install pyyaml ````
 
 
