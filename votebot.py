@@ -6,6 +6,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
+import yaml
+
+with open('config.yaml') as f:
+        data = yaml.load(f, Loader=yaml.FullLoader)
+
+        user = data['user']
+        server = data['server']
+
 opts = Options()
 #opts.set_headless()
 #assert opts.headless  # Operating in headless mode
@@ -54,4 +62,4 @@ def vote(User):
         print('Sucessfully voted');
     time.sleep(5);
     browser.close();
-vote('Minecraft_Name');
+vote(user);
