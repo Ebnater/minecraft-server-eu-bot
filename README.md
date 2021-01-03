@@ -1,11 +1,11 @@
-## minecraft-server-eu-bot
+### minecraft-server-eu-bot
 
-# Description
+## Description
 This is a votebot for minecraft-server.eu
 With this script you can easily vote for minecraft
 servers without doing something
 
-# Presettings
+## Presettings
 
 - Firefox
 - geckodriver
@@ -15,5 +15,8 @@ servers without doing something
 - YAML ```` pip install pyyaml ````
 
 
-# Use
+## Use
 Enter your Minecraft Name and your Vote Website in ````config.yaml````
+
+## Installation
+
