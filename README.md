@@ -23,9 +23,9 @@ Enter your Minecraft Name and your Vote Website in ````config.yaml````
 # Windows
 - Download the git repo and extract it.
 - Install Python at https://www.python.org/
-- Download the latest version pip at https://github.com/pypa/get-pip/releases
-  Download the zip package
+- Download the latest version pip at https://github.com/pypa/get-pip/releases. 
+  Download the zip package. 
   Unpack the package
   double click the extracted ````get-pip.py```` File or open the cmd, go to Downloads and type ````python get-pip.py````
-- Install the requred Packages: ````pip install selenium pyyaml````
+- Install the requred Packages: ````pip install selenium pyyaml get-geckodriver```` 
 - After install start the script with ````python votebot.py````
