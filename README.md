@@ -1,4 +1,4 @@
-### minecraft-server-eu-bot
+# minecraft-server-eu-bot
 
 ## Description
 This is a votebot for minecraft-server.eu
