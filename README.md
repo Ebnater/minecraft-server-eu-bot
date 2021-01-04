@@ -20,7 +20,7 @@ Enter your Minecraft Name and your Vote Website in ````config.yaml````
 
 ## Installation
 
-# Windows
+### Windows
 - Download the git repo and extract it.
 - Download the webdriver latest for Firefox https://github.com/mozilla/geckodriver/releases/.
   Extract the Downloaded File. Put the downloaded ````.exe```` file in the extracted git repo folder 
