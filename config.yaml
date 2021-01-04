@@ -1,2 +1,4 @@
 'user': 'Minecraft_Name'
 'server': 'server_url' 
+'headless': '0'
+#1=True 0=False
