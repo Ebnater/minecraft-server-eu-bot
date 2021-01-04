@@ -44,3 +44,10 @@ Enter your Minecraft Name and your Vote Website in ````config.yaml````
 - Execute ````get-geckodriver````
 - Choose Settings in ````config.yaml```` file
 - After installation start the script with ````python votebot_linux.py````
+
+
+# To-Do
+- Self extracting setup for windows
+- package install ````install.sh```` for Linux
+- Multiple User Vote
+- autostart ready ````start.bat```` for Windows
