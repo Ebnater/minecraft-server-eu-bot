@@ -20,10 +20,16 @@ CURR_DIR = os.path.dirname(os.path.realpath(__file__))
 print(CURR_DIR)
 
 opts = Options()
-def vote(User):      
-    print('Operating in Windows Mode')        
-    path=CURR_DIR + '\geckodriver.exe'    
+def vote(User):
+    print('Operating in Windows Mode')
+
+    path=CURR_DIR + '\geckodriver.exe'
     browser = Firefox(executable_path = path , options=opts)
+
+
+    addon=CURR_DIR + "\\uBlock0@raymondhill.net.xpi"
+    browser.install_addon(addon)
+    print('Inserting uBlock')
 
     print('Voting for ' + User + '!');
     browser.get(server);
@@ -41,11 +47,11 @@ def vote(User):
     print('Scrolling into View');
     browser.execute_script("arguments[0].scrollIntoView(true);", I)
     time.sleep(10)
-    
+
     player=browser.find_element_by_xpath('//*[@id="playername"]')
     player.send_keys(User);
     print('Inserting Username')
-    
+
     I=browser.find_element_by_xpath('//*[@id="captcha"]')
     print('Scrolling into View');
     browser.execute_script("arguments[0].scrollIntoView(true);", I)
@@ -61,7 +67,7 @@ def vote(User):
         print('Sucessfully voted');
     time.sleep(5);
     browser.close();
-if headless == '1':        
+if headless == '1':
     opts.set_headless()
-    assert opts.headless  # Operating in headless mode 
+    assert opts.headless  # Operating in headless mode
 vote(user);
