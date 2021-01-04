@@ -12,7 +12,7 @@ import os
 with open('config.yaml') as f:
         data = yaml.load(f, Loader=yaml.FullLoader)
 
-        user = data['user']
+        username_file = data['username_file']
         server = data['server']
         headless = data['headless']
 
@@ -70,4 +70,7 @@ def vote(User):
 if headless == '1':
     opts.set_headless()
     assert opts.headless  # Operating in headless mode
-vote(user);
+with open(username_file,'r') as file:
+    for line in file:
+        for word in line.split():
+            vote(word);

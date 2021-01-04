@@ -12,7 +12,7 @@ import os
 with open('config.yaml') as f:
         data = yaml.load(f, Loader=yaml.FullLoader)
 
-        user = data['user']
+        username_file = data['username_file']
         server = data['server']
         headless = data['headless']
 
@@ -21,14 +21,14 @@ print(CURR_DIR)
 
 opts = Options()
 def vote(User):
-    print('Operating in Linux Mode')    
+    print('Operating in Linux Mode')
     browser = Firefox(options=opts)
-    browser.install_addon(CURR_DIR + '/uBlock0@raymondhill.net.xpi', temporary=True)    
+    browser.install_addon(CURR_DIR + '/uBlock0@raymondhill.net.xpi', temporary=True)
     print('Inserting uBlock')
-    
+
     print('Voting for ' + User + '!');
     browser.get(server);
-    
+
     time.sleep(5);
     if browser.find_elements_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/button[2]'):
         browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/button[2]').click()
@@ -42,11 +42,11 @@ def vote(User):
     print('Scrolling into View');
     browser.execute_script("arguments[0].scrollIntoView(true);", I)
     time.sleep(10)
-    
+
     player=browser.find_element_by_xpath('//*[@id="playername"]')
     player.send_keys(User);
     print('Inserting Username')
-    
+
     I=browser.find_element_by_xpath('//*[@id="captcha"]')
     print('Scrolling into View');
     browser.execute_script("arguments[0].scrollIntoView(true);", I)
@@ -63,8 +63,10 @@ def vote(User):
     time.sleep(5);
     browser.close();
 
-if headless == '1':        
+if headless == '1':
     opts.set_headless()
-    assert opts.headless  # Operating in headless mode 
-
-vote(user);
+    assert opts.headless  # Operating in headless mode
+with open(username_file,'r') as file:
+    for line in file:
+        for word in line.split():
+            vote(word);
