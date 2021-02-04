@@ -70,7 +70,6 @@ def vote(User):
 if headless == '1':
     opts.set_headless()
     assert opts.headless  # Operating in headless mode
-with open(username_file,'r') as file:
-    for line in file:
-        for word in line.split():
-            vote(word);
+with open (username_file) as textFile:
+    for line in textFile:
+        vote(line.strip())
