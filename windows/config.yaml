@@ -1,0 +1,4 @@
+'username_file': 'user.txt'
+'server': 'server_url'
+'headless': '0'
+#1=True 0=False
