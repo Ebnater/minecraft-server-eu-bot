@@ -1,1 +1,4 @@
 *.log
+Pytocs.Core.dll
+pytocs.exe
+DocoptNet.dll
