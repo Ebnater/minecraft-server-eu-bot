@@ -61,7 +61,8 @@ def vote(User):
     print('Voting');
     time.sleep(10);
     c = browser.current_url
-    if c == 'https://minecraft-server.eu/vote/fail/208F7':
+    #'fail' in c
+    if c.find('fail') != -1:
         print('Already Voted/Failed to vote');
     else:
         print('Sucessfully voted');
