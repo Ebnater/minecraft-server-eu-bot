@@ -8,7 +8,6 @@ servers without doing something
 ## Presettings
 
 - Firefox
-- geckodriver
 - Python 3.6+
 - pip 3.6
 - Selenium ```` pip install selenium ````
@@ -22,8 +21,6 @@ Enter your Minecraft Name and your Vote Website in ````config.yaml````
 
 ### Windows
 - Download the git repo and extract it.
-- Download the webdriver latest for Firefox https://github.com/mozilla/geckodriver/releases/.
-  Extract the Downloaded File. Put the downloaded ````.exe```` file in the extracted git repo folder
 - Install Python at https://www.python.org/
 - Download the latest version pip at https://github.com/pypa/get-pip/releases.
   Download the zip package.
